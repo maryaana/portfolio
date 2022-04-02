@@ -1,0 +1,19 @@
+.button {
+  position: fixed;
+  left: 50%;
+  bottom: 0px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: white;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 6px 24px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.2s;
+  cursor: pointer;
+  z-index: 5;
+}

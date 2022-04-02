@@ -4,17 +4,20 @@ import { linkSVG as LinkSVG } from './../../assets/svgs';
 import { EPROJECTCASES } from 'types/enums';
 
 type Props = {
-  Icon: ({ className }: { className: string }) => JSX.Element;
   backgroundColor: string;
   appearDelay?: number;
   projectCase: EPROJECTCASES;
+  path: string;
+  link: string;
 };
 
-export const Project = ({ Icon, backgroundColor, projectCase, appearDelay = 0 }: Props) => {
+export const Project = ({ backgroundColor, projectCase, path, link, appearDelay = 0 }: Props) => {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     rootMargin: '-200px 0px',
   });
+
+  console.log(path);
 
   return (
     <div
@@ -22,16 +25,19 @@ export const Project = ({ Icon, backgroundColor, projectCase, appearDelay = 0 }:
       style={{ backgroundColor, transitionDelay: appearDelay + 'ms' }}
       className={`${styles.wrapper} ${inView ? styles.wrapper_appear : ''}`}
     >
-      <div className={styles.animator}>
-        <div className={styles.animationContent}>
-          <LinkSVG />
-          <div className={styles.linkHint}>
-            Посмотреть проект
-            <br />[{projectCase}]
+      <a href={link} target="_blank">
+        <div className={styles.animator}>
+          <div className={styles.animationContent}>
+            <LinkSVG />
+
+            <div className={styles.linkHint}>
+              Посмотреть проект
+              <br />[{projectCase}]
+            </div>
           </div>
         </div>
-      </div>
-      <Icon className={styles.icon} />
+        <img className={styles.icon} src={path} />
+      </a>
     </div>
   );
 };

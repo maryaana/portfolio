@@ -86,6 +86,7 @@
 .left,
 .right {
   display: flex;
+  align-content: baseline;
   flex-wrap: wrap;
   row-gap: 10px;
   width: calc(50% - 5px);

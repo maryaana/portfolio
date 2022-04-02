@@ -28,11 +28,8 @@ export const Footer = ({ actionPath, onNewRoute, parentIsActive, className = '' 
         !parentIsActive && styles.wrapper_hidden
       } ${className}`}
     >
-      <div className={styles.text}>Designer: Maryana Titova</div>
-      <div className={styles.button} onClick={bindRoute(actionPath)}>
-        {actionPath === EROUTES.PORTFOLIO ? 'Портфолио' : 'Обо мне'}
-      </div>
-      <div className={styles.text}>Thanks for watching❤️</div>
+      <div className={styles.text}>Дизайнер: Марьяна Титова</div>
+      <div className={styles.text}>Спасибо за просмотр❤️</div>
     </div>
   );
 };

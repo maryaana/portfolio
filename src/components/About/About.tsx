@@ -1,3 +1,4 @@
+import { MediaLinkSVG } from 'assets/svgs';
 import { Footer } from 'components/Footer/Footer';
 import { Subheading } from 'components/Subheading/Subheading';
 import { CSSProperties } from 'react';
@@ -84,18 +85,29 @@ export const About = ({ isActive, onNewRoute }: Props) => {
               <Subheading content="Медиа" />
             </div>
             <div className={styles.text}>
-              — Behance
+              <div className={styles.mediaBox}>
+                <a target="_blank" href="https://www.behance.net/maryaana">
+                  <span>Behance</span> <MediaLinkSVG className={styles.mediaLink} />
+                </a>
+              </div>
               <br />
+              <div className={styles.mediaBox}>
+                <a target="_blank" href="https://dribbble.com/maryaana">
+                  <span>Dribbble</span> <MediaLinkSVG className={styles.mediaLink} />
+                </a>
+              </div>
               <br />
-              — Dribble
+              <div className={styles.mediaBox}>
+                <a target="_blank" href="https://www.linkedin.com/in/maryaana/">
+                  <span>Linkedin</span> <MediaLinkSVG className={styles.mediaLink} />
+                </a>
+              </div>
               <br />
-              <br />
-              — Linkedin
-              <br />
-              <br />
-              — Telegram
-              <br />
-              <br />— Email
+              <div className={styles.mediaBox}>
+                <a target="_blank" href="https://t.me/maryaana">
+                  <span>Telegram</span> <MediaLinkSVG className={styles.mediaLink} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
