@@ -7,3 +7,4 @@ export * from './Portfolio/Portfolio';
 export * from './About/About';
 export * from './Footer/Footer';
 export * from './SubNav/SubNav';
+export * from './SmallHint/SmallHint';

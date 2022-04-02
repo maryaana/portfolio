@@ -17,8 +17,6 @@ export const Project = ({ backgroundColor, projectCase, path, link, appearDelay 
     rootMargin: '-200px 0px',
   });
 
-  console.log(path);
-
   return (
     <div
       ref={ref}

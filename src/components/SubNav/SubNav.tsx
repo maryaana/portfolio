@@ -13,7 +13,7 @@ export const SubNav = ({ activeRoute, onNewRoute }: Props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      ref.current!.style.opacity = '1';
+      if (ref.current) ref.current.style.opacity = '1';
     }, 1500);
   }, []);
 

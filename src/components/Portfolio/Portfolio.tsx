@@ -8,6 +8,7 @@ import flour from './../../assets/svgs/files/flour.jpg';
 import clio from './../../assets/svgs/files/clio.jpg';
 import liteManager from './../../assets/svgs/files/liteManager.jpg';
 import carsRent from './../../assets/svgs/files/carsRent.jpg';
+import { useEffect } from 'react';
 type Props = {
   isActive: boolean;
   onNewRoute: (newRoute: EROUTES) => void;
@@ -15,7 +16,7 @@ type Props = {
 
 export const Portfolio = ({ isActive, onNewRoute }: Props) => {
   return (
-    <section className={`${styles.wrapper} ${!isActive && styles.wrapper_hidden}`}>
+    <section id="luxy" className={`${styles.wrapper} ${!isActive && styles.wrapper_hidden}`}>
       <div className={styles.inner}>
         <Heading content="Портфолио" className={styles.heading} />
         <div className={styles.projectsArea}>
