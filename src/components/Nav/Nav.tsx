@@ -8,6 +8,7 @@ type Props = {
 };
 
 export const Nav = ({ activeRoute, onNewRoute }: Props) => {
+  // TODO: appearence for navigation
   const [isVisible, setIsVisible] = useState(true);
 
   const bindRoute = (routeName: EROUTES) => {

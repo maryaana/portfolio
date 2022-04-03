@@ -5,3 +5,10 @@
   font-size: 35px;
   line-height: 50px;
 }
+
+@media screen and (max-width: 1520px) {
+  .subheading {
+    font-size: 25px;
+    line-height: 31px;
+  }
+}

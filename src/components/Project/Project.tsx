@@ -23,7 +23,7 @@ export const Project = ({ backgroundColor, projectCase, path, link, appearDelay 
       style={{ backgroundColor, transitionDelay: appearDelay + 'ms' }}
       className={`${styles.wrapper} ${inView ? styles.wrapper_appear : ''}`}
     >
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noreferrer">
         <div className={styles.animator}>
           <div className={styles.animationContent}>
             <LinkSVG />

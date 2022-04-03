@@ -5,14 +5,14 @@ import { EROUTES } from './types/enums';
 
 function App() {
   const [activeRoute, setActiveRoute] = useState(EROUTES.PORTFOLIO);
-  const [screenIsTooSmall, setScreenIsTooSmall] = useState(window.innerWidth < 1420);
+  const [screenIsTooSmall, setScreenIsTooSmall] = useState(window.innerWidth < 1100);
 
   useEffect(() => {
     window.addEventListener('resize', checkSize);
   }, []);
 
   const checkSize = () => {
-    if (window.innerWidth < 1420) {
+    if (window.innerWidth < 1100) {
       setScreenIsTooSmall(() => true);
     } else {
       setScreenIsTooSmall(() => false);

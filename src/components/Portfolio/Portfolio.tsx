@@ -57,7 +57,7 @@ export const Portfolio = ({ isActive, onNewRoute }: Props) => {
 
   return (
     <section id="scroller" className={`${styles.wrapper} ${!isActive && styles.wrapper_hidden}`}>
-      <div id="wrapper">
+      <div id="wrapper" className={styles.outer}>
         <div id="inner" className={styles.inner}>
           <Heading content="Портфолио" className={styles.heading} />
           <div className={styles.projectsArea}>

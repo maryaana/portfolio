@@ -57,7 +57,7 @@ export const About = ({ isActive, onNewRoute }: Props) => {
       id="aboutScroller"
       className={`${styles.wrapper} ${!isActive && styles.wrapper_hidden}`}
     >
-      <div id="aboutWrapper">
+      <div id="aboutWrapper" className={styles.outer}>
         <div id="aboutInner" className={styles.inner}>
           <Heading content="Обо мне" className={styles.heading} />
           <div className={styles.content}>
@@ -116,39 +116,29 @@ export const About = ({ isActive, onNewRoute }: Props) => {
             </div>
             <div style={{ '--delay': 0.4 } as CSSProperties} className={styles.line}>
               <div className={styles.sticky}>
-                <Subheading content="Опыт работы" />
-              </div>
-              <div className={styles.text}>
-                Три года на фрилансе: в основном делала дизайн и адаптивные версии корпоративных
-                сайтов, онлайн-магазинов, лендингов, мобильные приложения, редизайны продуктов. А
-                ещё немного логотипов, баннеров и листовок.
-              </div>
-            </div>
-            <div style={{ '--delay': 0.5 } as CSSProperties} className={styles.line}>
-              <div className={styles.sticky}>
-                <Subheading content="Медиа" />
+                <Subheading content="Контакты" />
               </div>
               <div className={styles.text}>
                 <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://www.behance.net/maryaana">
+                  <a target="_blank" href="https://www.behance.net/maryaana" rel="noreferrer">
                     <span>Behance</span> <MediaLinkSVG className={styles.mediaLink} />
                   </a>
                 </div>
                 <br />
                 <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://dribbble.com/maryaana">
+                  <a target="_blank" href="https://dribbble.com/maryaana" rel="noreferrer">
                     <span>Dribbble</span> <MediaLinkSVG className={styles.mediaLink} />
                   </a>
                 </div>
                 <br />
                 <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://www.linkedin.com/in/maryaana/">
+                  <a target="_blank" href="https://www.linkedin.com/in/maryaana/" rel="noreferrer">
                     <span>Linkedin</span> <MediaLinkSVG className={styles.mediaLink} />
                   </a>
                 </div>
                 <br />
                 <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://t.me/maryaana">
+                  <a target="_blank" href="https://t.me/maryaana" rel="noreferrer">
                     <span>Telegram</span> <MediaLinkSVG className={styles.mediaLink} />
                   </a>
                 </div>

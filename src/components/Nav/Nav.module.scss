@@ -26,3 +26,17 @@
     list-style-type: none;
   }
 }
+
+@media screen and (max-width: 1520px) {
+  .navigation {
+    left: calc(50% - 600px - 3px);
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .navigation {
+    left: calc(50% - 500px - 3px);
+    max-width: 1000px;
+  }
+}

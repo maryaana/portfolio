@@ -27,7 +27,7 @@ export const SmallHint = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inner}>
-        <Subheading content={`Для просмотра сайта рекомендован экран с шириной более 1420px`} />
+        <Subheading content={`Для просмотра сайта рекомендован экран с шириной более 1100px`} />
         <Subheading content={`Ваш экран:`} />
         <Heading content={`${screenSize.width}x${screenSize.height}`} />
       </div>
