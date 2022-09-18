@@ -1,4 +1,5 @@
 import { MediaLinkSVG } from 'assets/svgs';
+import { Expierience } from 'components/Expierience/Expierience';
 import { Footer } from 'components/Footer/Footer';
 import { Subheading } from 'components/Subheading/Subheading';
 import { CSSProperties, useEffect } from 'react';
@@ -8,10 +9,12 @@ import styles from './About.module.scss';
 
 type Props = {
   isActive: boolean;
+  isMenuHidden: boolean;
+  onChangeMenuState: (newState: boolean) => void;
   onNewRoute: (newRoute: EROUTES) => void;
 };
 
-export const About = ({ isActive, onNewRoute }: Props) => {
+export const About = ({ isActive, isMenuHidden, onChangeMenuState, onNewRoute }: Props) => {
   useEffect(() => {
     const scroller = document.getElementById('aboutScroller')!;
     const body = document.getElementById('aboutWrapper')!;
@@ -30,6 +33,12 @@ export const About = ({ isActive, onNewRoute }: Props) => {
     function easeScroll() {
       sx = scroller.scrollLeft;
       sy = scroller.scrollTop;
+
+      if (sy) {
+        onChangeMenuState(true);
+      } else {
+        onChangeMenuState(false);
+      }
     }
 
     window.requestAnimationFrame(render);
@@ -66,9 +75,9 @@ export const About = ({ isActive, onNewRoute }: Props) => {
                 <Subheading content="Интро" />
               </div>
               <div className={`${styles.text} ${styles.text_accent}`}>
-                Привет, я Марьяна Титова, web-дизайнер в Санкт-Петербурге. Я занимаюсь дизайном
-                интерфейсов и прототипированием. Постоянно ищу баланс между эстетикой, удобством для
-                пользователя и задачами бизнеса. Люблю продуктовый дизайн и минимализм (:
+                Привет, я Марьяна Титова.
+                <br />
+                UI/UX дизайнер из Санкт-Петербурга
               </div>
             </div>
             <div style={{ '--delay': 0.1 } as CSSProperties} className={styles.line}>
@@ -76,42 +85,59 @@ export const About = ({ isActive, onNewRoute }: Props) => {
                 <Subheading content="Опыт работы" />
               </div>
               <div className={styles.text}>
-                Три года на фрилансе: в основном делала дизайн и адаптивные версии корпоративных
-                сайтов, онлайн-магазинов, лендингов, мобильные приложения, редизайны продуктов. А
-                ещё немного логотипов, баннеров и листовок.
+                <Expierience
+                  className={styles.exp}
+                  name="paraweb"
+                  meta="UX/UI designer"
+                  date="июль 2022 — н.в."
+                  content="Создавала интерфейсы для сайтов, разрабатывала креативные концепции, обсуждала их внутри команды, разрабатывала прототипы, подготавливала макеты к верстке и участвовала в контроле качества реализации дизайна"
+                />
+                <Expierience
+                  className={styles.exp}
+                  name="terexov"
+                  meta="Web designer"
+                  date="август 2020 — март 2022"
+                  content="Занималась полным циклом создания дизайнов: от прототипирования до подготовки и передачи макетов команде разработчиков. Утверждала работы других дизайнеров и вносила правки"
+                />
+                <Expierience
+                  name="freelance"
+                  meta="Designer"
+                  date="июнь 2019 — июль 2020"
+                  content="Занималась дизайном и адаптивными версиями корпоративных сайтов, онлайн-магазинов, лендингов, мобильных приложений, редизайнами продуктов. Также разрабатывала логотипы, презентации, иконки, баннеры и листовки"
+                />
               </div>
             </div>
             <div style={{ '--delay': 0.2 } as CSSProperties} className={styles.line}>
               <div className={styles.sticky}>
-                <Subheading content="Образование" />
-              </div>
-              <div className={styles.text}>Университет ИТМО</div>
-            </div>
-            <div style={{ '--delay': 0.3 } as CSSProperties} className={styles.line}>
-              <div className={styles.sticky}>
                 <Subheading content="Что умею" />
               </div>
               <div className={styles.text}>
-                — Прототипирование и дизайн: Figma, Adobe XD
+                — Прототипирование и дизайн: Figma
                 <br />
                 <br />
-                — Анимация: Motion и Figmotion (плагины Figma), Adobe After Effects, SVGator
-                (SVG-анимация)
+                — Анимация: Motion и Figmotion (плагины Figma), SVGator (SVG-анимация)
                 <br />
                 <br />
-                — Иллюстрация: Adobe Illustrator, Adobe Photoshop
+                — Графика: Adobe Illustrator, Adobe Photoshop, графический планшет
                 <br />
                 <br />
-                — Знаю фронтенд на базовом уровне (CSS, HTML, JS). Я программист по образованию, так
-                что могу общаться с командой разработчиков на одном языке :)
+                — UI-киты в Figma: компоненты, auto layouts, варианты и стили
                 <br />
                 <br />
-                — Знакома с Human Interface Guidelines
+                — Фронтенд на базовом уровне: CSS, HTML, JS
                 <br />
                 <br />
-                — Немного рисую на графическом планшете (7 лет отучилась в художественной школе)
+                — Гайдлайны: Human Interface Guidelines и Material Design
                 <br />
-                <br />— С удовольствием обучусь новым технологиям и работе с новыми инструментами
+                <br />— Прочее: Notion, YouTrack, Tilda
+              </div>
+            </div>
+            <div style={{ '--delay': 0.3 } as CSSProperties} className={styles.line}>
+              <div className={styles.sticky}>
+                <Subheading content="Образование" />
+              </div>
+              <div className={styles.text}>
+                <Expierience name="Университет ИТМО" meta="Санкт-Петербург" date="2018-2022" />
               </div>
             </div>
             <div style={{ '--delay': 0.4 } as CSSProperties} className={styles.line}>
@@ -142,6 +168,16 @@ export const About = ({ isActive, onNewRoute }: Props) => {
                     <span>Telegram</span> <MediaLinkSVG className={styles.mediaLink} />
                   </a>
                 </div>
+              </div>
+            </div>
+            <div style={{ '--delay': 0.5 } as CSSProperties} className={styles.line}>
+              <div className={styles.sticky}>
+                <Subheading content="CV в формате PDF" />
+              </div>
+              <div className={styles.text}>
+                <a href="/cv.pdf">
+                  <button className={styles.pdf}>Скачать (PDF, 1.5 МБ)</button>
+                </a>
               </div>
             </div>
           </div>

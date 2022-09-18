@@ -1,10 +1,17 @@
+import { ReactNode } from 'react';
 import styles from './Heading.module.scss';
 
 type Props = {
   content: string;
+  hint?: ReactNode;
   className?: string;
 };
 
-export const Heading = ({ content, className = '' }: Props) => {
-  return <h1 className={`${styles.heading} ${className}`}>{content}</h1>;
+export const Heading = ({ content, hint, className = '' }: Props) => {
+  return (
+    <div className={`${styles.wrapper} ${className}`}>
+      <h1 className={styles.heading}>{content}</h1>
+      {hint}
+    </div>
+  );
 };

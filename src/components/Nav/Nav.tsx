@@ -3,14 +3,12 @@ import { EROUTES } from '../../types/enums';
 import styles from './Nav.module.scss';
 
 type Props = {
+  isHidden: boolean;
   activeRoute: EROUTES;
   onNewRoute: (routeName: EROUTES) => void;
 };
 
-export const Nav = ({ activeRoute, onNewRoute }: Props) => {
-  // TODO: appearence for navigation
-  const [isVisible, setIsVisible] = useState(true);
-
+export const Nav = ({ isHidden, activeRoute, onNewRoute }: Props) => {
   const bindRoute = (routeName: EROUTES) => {
     return () => {
       onNewRoute(routeName);
@@ -18,7 +16,8 @@ export const Nav = ({ activeRoute, onNewRoute }: Props) => {
   };
 
   return (
-    <nav className={`${styles.navigation} ${isVisible && styles.navigation_active}`}>
+    <nav className={`${styles.navigation} ${isHidden ? styles.navigation_hidden : ''}`}>
+      <p className={styles.name}>Марьяна Титова</p>
       <ul className={styles.line}>
         <li
           className={`uppercase subtitle ${

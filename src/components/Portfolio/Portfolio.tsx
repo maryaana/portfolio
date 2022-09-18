@@ -11,10 +11,12 @@ import carsRent from './../../assets/svgs/files/carsRent.jpg';
 import { useEffect } from 'react';
 type Props = {
   isActive: boolean;
+  isMenuHidden: boolean;
+  onChangeMenuState: (newState: boolean) => void;
   onNewRoute: (newRoute: EROUTES) => void;
 };
 
-export const Portfolio = ({ isActive, onNewRoute }: Props) => {
+export const Portfolio = ({ isActive, isMenuHidden, onChangeMenuState, onNewRoute }: Props) => {
   useEffect(() => {
     const scroller = document.getElementById('scroller')!;
     const body = document.getElementById('wrapper')!;
@@ -33,6 +35,12 @@ export const Portfolio = ({ isActive, onNewRoute }: Props) => {
     function easeScroll() {
       sx = scroller.scrollLeft;
       sy = scroller.scrollTop;
+
+      if (sy) {
+        onChangeMenuState(true);
+      } else {
+        onChangeMenuState(false);
+      }
     }
 
     window.requestAnimationFrame(render);
@@ -59,7 +67,17 @@ export const Portfolio = ({ isActive, onNewRoute }: Props) => {
     <section id="scroller" className={`${styles.wrapper} ${!isActive && styles.wrapper_hidden}`}>
       <div id="wrapper" className={styles.outer}>
         <div id="inner" className={styles.inner}>
-          <Heading content="Портфолио" className={styles.heading} />
+          <Heading
+            content="Портфолио"
+            hint={
+              <p className={styles.hint}>
+                последнее обновление:
+                <br />
+                сентябрь 2022
+              </p>
+            }
+            className={styles.heading}
+          />
           <div className={styles.projectsArea}>
             <div className={styles.left}>
               <div className={styles.projectBounder}>
@@ -90,10 +108,10 @@ export const Portfolio = ({ isActive, onNewRoute }: Props) => {
               </div>
               <div className={styles.projectBounder}>
                 <Project
-                  projectCase={EPROJECTCASES.FIGMA}
+                  projectCase={EPROJECTCASES.BEHANCE}
                   backgroundColor="#2997EE"
                   appearDelay={200}
-                  link="https://www.figma.com/file/F16vohrUm3Xl1tkLBQYzVV/%5BPortfolio%5D-Cars-rent?node-id=0%3A1"
+                  link="https://www.behance.net/gallery/152935037/Cars-Rent-Website"
                   path={carsRent}
                 />
               </div>

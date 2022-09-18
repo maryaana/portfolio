@@ -4,11 +4,12 @@ import { EROUTES } from 'types/enums';
 import styles from './SubNav.module.scss';
 
 type Props = {
+  isHidden: boolean;
   activeRoute: EROUTES;
   onNewRoute: (newRoute: EROUTES) => void;
 };
 
-export const SubNav = ({ activeRoute, onNewRoute }: Props) => {
+export const SubNav = ({ isHidden, activeRoute, onNewRoute }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +24,11 @@ export const SubNav = ({ activeRoute, onNewRoute }: Props) => {
   };
 
   return (
-    <div ref={ref} className={styles.button} onClick={selectRoute}>
+    <div
+      ref={ref}
+      className={`${styles.button} ${isHidden ? styles.button_hidden : ''}`}
+      onClick={selectRoute}
+    >
       {activeRoute === EROUTES.ABOUT ? 'посмотреть портфолио' : 'почитать обо мне'}
     </div>
   );

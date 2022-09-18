@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+}
+
+.name {
+  font-family: 'Stratos Regular';
+  width: 100%;
+  margin-bottom: 17px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.meta{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  &__meta {
+    font-family: 'Stratos Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  &__date {
+    font-family: 'Stratos Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  &__decorator {
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background: #000000;
+    opacity: 0.3;
+  }
+}
+
+.content {
+  margin-top: 16px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}

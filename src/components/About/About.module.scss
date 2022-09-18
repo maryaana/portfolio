@@ -149,6 +149,33 @@
   margin-left: 2px;
 }
 
+.exp {
+  margin-bottom: 64px;
+}
+
+.pdf {
+  border: 2px solid black;
+  padding: 12px 24px;
+  background: #000000;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-family: 'Stratos Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    border: 2px solid black;
+    background: #FFFFFF;
+    color: #000000;
+    transition: .3s;
+  }
+}
+
 @media screen and (max-width: 1520px) {
   .inner {
     max-width: 1200px;

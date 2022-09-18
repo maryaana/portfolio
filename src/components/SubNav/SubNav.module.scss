@@ -25,4 +25,9 @@
     border-bottom: 2px solid white;
     transition: 0.3s;
   }
+
+  &_hidden {
+    transform: translate(-50%, 42px);
+    transition: 0.3s;
+  }
 }

@@ -1,6 +1,13 @@
-.heading {
+.wrapper {
   margin-top: 150px;
   margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
   font-family: 'Stratos Regular';
   font-style: normal;
   font-weight: 400;
@@ -9,8 +16,11 @@
 }
 
 @media screen and (max-width: 1520px) {
-  .heading {
+  .wrapper {
     margin-top: 50px;
+  }
+
+  .heading {
     font-style: normal;
     font-weight: 400;
     font-size: 80px;
