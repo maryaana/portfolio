@@ -57,6 +57,7 @@
 }
 
 .liner {
+  flex-shrink: 0;
   width: 9px;
   height: 1px;
   background-color: #999999;
