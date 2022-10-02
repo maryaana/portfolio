@@ -92,6 +92,7 @@ export const Portfolio = ({ isActive, isMenuHidden, onChangeMenuState, onNewRout
                 link="https://www.behance.net/gallery/139814219/Cooking-school-for-kids-Website"
                 name="Дети на кухне — сайт для детской кулинарной школы"
                 year="2022"
+                appearDelay={0}
                 path={childrenOnKitchen}
               />
             </div>
@@ -99,7 +100,7 @@ export const Portfolio = ({ isActive, isMenuHidden, onChangeMenuState, onNewRout
               <Project
                 projectCase={EPROJECTCASES.BEHANCE}
                 backgroundColor="#121212"
-                appearDelay={200}
+                appearDelay={0}
                 link="https://www.behance.net/gallery/138296035/Architecture-Studio-Website-Concept"
                 name="Architecture studio — лендинг архитектурной студии"
                 year="2021"
@@ -121,6 +122,7 @@ export const Portfolio = ({ isActive, isMenuHidden, onChangeMenuState, onNewRout
               <Project
                 projectCase={EPROJECTCASES.FIGMA}
                 backgroundColor="#F9FF7F"
+                appearDelay={200}
                 link="https://www.figma.com/proto/g7oGb7aatxmj1oVdMEes9w/%5BPortfolio%5D-Zenter-Family?page-id=0%3A1&node-id=2%3A1038&viewport=265%2C48%2C0.03&scaling=scale-down&starting-point-node-id=2%3A1038"
                 name="Zenter Family — интернет-магазин смесей для выпечки"
                 year="2021"
@@ -131,7 +133,7 @@ export const Portfolio = ({ isActive, isMenuHidden, onChangeMenuState, onNewRout
               <Project
                 projectCase={EPROJECTCASES.SITE}
                 backgroundColor="#2A313C"
-                appearDelay={200}
+                appearDelay={0}
                 link="https://pechenyice.github.io/quartetLanding/"
                 name="Clio Quartet — лендинг для струнного квартета"
                 year="2021"
@@ -142,7 +144,7 @@ export const Portfolio = ({ isActive, isMenuHidden, onChangeMenuState, onNewRout
               <Project
                 projectCase={EPROJECTCASES.SITE}
                 backgroundColor="#43B757"
-                appearDelay={200}
+                appearDelay={0}
                 link="https://litemanager.org/"
                 name="LiteManager — сайт для отечественного teamviewer’а"
                 year="2020"

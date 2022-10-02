@@ -11,7 +11,6 @@ type Props = {
   link: string;
   name: string;
   year: string;
-  isOneLiner?: boolean;
 };
 
 export const Project = ({
@@ -21,7 +20,6 @@ export const Project = ({
   link,
   name,
   year,
-  isOneLiner,
   appearDelay = 0,
 }: Props) => {
   const { ref, inView, entry } = useInView({
@@ -33,9 +31,7 @@ export const Project = ({
     <div
       ref={ref}
       style={{ transitionDelay: appearDelay + 'ms' }}
-      className={`${styles.wrapper} ${isOneLiner ? styles.oneLiner : ''} ${
-        inView ? styles.wrapper_appear : ''
-      }`}
+      className={`${styles.wrapper} ${inView ? styles.wrapper_appear : ''}`}
     >
       <a href={link} target="_blank" rel="noreferrer">
         <div className={styles.animator} style={{ backgroundColor }}>

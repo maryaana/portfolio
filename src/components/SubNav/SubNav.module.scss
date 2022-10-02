@@ -31,3 +31,9 @@
     transition: 0.3s;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 6px 12px;
+  }
+}
