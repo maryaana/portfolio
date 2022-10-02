@@ -3,10 +3,10 @@
   max-width: 1420px;
   height: 50px;
   margin: auto;
-  margin-top: 300px;
+  margin-top: 200px;
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
   overflow: visible;
 
   & .text {
@@ -21,7 +21,7 @@
 
   &_active {
     & .text {
-      transform: translateY(-30px);
+      transform: translateY(-24px);
       opacity: 1;
       transition: 0.2s;
       transition-delay: 0.9s;
@@ -33,6 +33,35 @@
       transform: translateY(0px);
       opacity: 0;
       transition: 0.2s;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    height: 42px;
+    margin-top: 60px;
+
+    & .text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    height: 82px;
+    margin-top: 82px;
+    display: block;
+
+    & .text {
+      font-size: 16px;
+      line-height: 22px;
+
+      &_last {
+        margin-top: 10px;
+      }
     }
   }
 }

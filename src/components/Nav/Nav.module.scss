@@ -49,9 +49,21 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   .navigation {
-    left: calc(50% - 500px - 3px);
-    max-width: 1000px;
+    left: calc(50% - 364px - 3px);
+    max-width: 728px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    left: calc(50% - 172px - 3px);
+    max-width: 343px;
+  }
+
+  .name {
+    font-size: 18px;
+    line-height: 22px;
   }
 }

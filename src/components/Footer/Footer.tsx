@@ -29,7 +29,7 @@ export const Footer = ({ actionPath, onNewRoute, parentIsActive, className = '' 
       } ${className}`}
     >
       <div className={styles.text}>Дизайнер: Марьяна Титова</div>
-      <div className={styles.text}>Спасибо за просмотр❤️</div>
+      <div className={styles.text + ' ' + styles.text_last}>Спасибо за просмотр❤️</div>
     </div>
   );
 };

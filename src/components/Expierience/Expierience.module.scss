@@ -18,6 +18,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-bottom: 20px;
 
   &__meta {
     font-family: 'Stratos Regular';
@@ -48,12 +49,50 @@
   }
 }
 
-.content {
-  margin-top: 16px;
+.contentLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
 
+.liner {
+  width: 9px;
+  height: 1px;
+  background-color: #999999;
+}
+
+.contentElem {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 25px;
   color: #000000;
+}
+
+@media screen and (max-width: 1300px) {
+  .name {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .meta{
+    margin-bottom: 16px;
+
+    &__meta {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  
+    &__date {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .contentElem {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }

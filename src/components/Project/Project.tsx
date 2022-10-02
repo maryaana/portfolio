@@ -9,9 +9,21 @@ type Props = {
   projectCase: EPROJECTCASES;
   path: string;
   link: string;
+  name: string;
+  year: string;
+  isOneLiner?: boolean;
 };
 
-export const Project = ({ backgroundColor, projectCase, path, link, appearDelay = 0 }: Props) => {
+export const Project = ({
+  backgroundColor,
+  projectCase,
+  path,
+  link,
+  name,
+  year,
+  isOneLiner,
+  appearDelay = 0,
+}: Props) => {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     rootMargin: '-200px 0px',
@@ -20,21 +32,23 @@ export const Project = ({ backgroundColor, projectCase, path, link, appearDelay 
   return (
     <div
       ref={ref}
-      style={{ backgroundColor, transitionDelay: appearDelay + 'ms' }}
-      className={`${styles.wrapper} ${inView ? styles.wrapper_appear : ''}`}
+      style={{ transitionDelay: appearDelay + 'ms' }}
+      className={`${styles.wrapper} ${isOneLiner ? styles.oneLiner : ''} ${
+        inView ? styles.wrapper_appear : ''
+      }`}
     >
       <a href={link} target="_blank" rel="noreferrer">
-        <div className={styles.animator}>
-          <div className={styles.animationContent}>
-            <LinkSVG />
-
-            <div className={styles.linkHint}>
-              Посмотреть проект
-              <br />[{projectCase}]
-            </div>
+        <div className={styles.animator} style={{ backgroundColor }}>
+          <img className={styles.icon} src={path} />
+        </div>
+        <div className={styles.text}>
+          <p className={styles.name}>{name}</p>
+          <div className={styles.meta}>
+            <p className={styles.case + ' ' + styles.meta__text}>{projectCase}</p>
+            <div className={styles.separator}></div>
+            <p className={styles.year + ' ' + styles.meta__text}>{year}</p>
           </div>
         </div>
-        <img className={styles.icon} src={path} />
       </a>
     </div>
   );

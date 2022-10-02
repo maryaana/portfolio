@@ -1,4 +1,9 @@
 import { MediaLinkSVG } from 'assets/svgs';
+import { BehanceIcon } from 'assets/svgs/common/behance';
+import { DribleIcon } from 'assets/svgs/common/drible';
+import { LinkedinIcon } from 'assets/svgs/common/linkedin';
+import { TelegramIcon } from 'assets/svgs/common/telegram';
+import { ContactLink } from 'components/ContactLink/ContactLink';
 import { Expierience } from 'components/Expierience/Expierience';
 import { Footer } from 'components/Footer/Footer';
 import { Subheading } from 'components/Subheading/Subheading';
@@ -75,7 +80,7 @@ export const About = ({ isActive, isMenuHidden, onChangeMenuState, onNewRoute }:
                 <Subheading content="Интро" />
               </div>
               <div className={`${styles.text} ${styles.text_accent}`}>
-                Привет, я Марьяна Титова.
+                Привет, я Марьяна Титова
                 <br />
                 UI/UX дизайнер из Санкт-Петербурга
               </div>
@@ -90,20 +95,25 @@ export const About = ({ isActive, isMenuHidden, onChangeMenuState, onNewRoute }:
                   name="paraweb"
                   meta="UX/UI designer"
                   date="июль 2022 — н.в."
-                  content="Создавала интерфейсы для сайтов, разрабатывала креативные концепции, обсуждала их внутри команды, разрабатывала прототипы, подготавливала макеты к верстке и участвовала в контроле качества реализации дизайна"
+                  content={[
+                    'Создавала интерфейсы для сайтов/мобильных приложений',
+                    'Разрабатывала креативные концепции и обсуждала их внутри команды',
+                    'Разрабатывала прототипы',
+                    'Подготавливала макеты к верстке',
+                    'Участвовала в контроле качества реализации дизайна',
+                    'Взаимодействовала с командой разработчиков и контент-менеджеров',
+                  ]}
                 />
                 <Expierience
                   className={styles.exp}
                   name="terexov"
                   meta="Web designer"
                   date="август 2020 — март 2022"
-                  content="Занималась полным циклом создания дизайнов: от прототипирования до подготовки и передачи макетов команде разработчиков. Утверждала работы других дизайнеров и вносила правки"
-                />
-                <Expierience
-                  name="freelance"
-                  meta="Designer"
-                  date="июнь 2019 — июль 2020"
-                  content="Занималась дизайном и адаптивными версиями корпоративных сайтов, онлайн-магазинов, лендингов, мобильных приложений, редизайнами продуктов. Также разрабатывала логотипы, презентации, иконки, баннеры и листовки"
+                  content={[
+                    'Общалась с заказчиками и составляла ТЗ',
+                    'Занималась полным циклом создания дизайнов: от прототипирования до подготовки и передачи макетов команде разработчиков',
+                    'Утверждала работы других дизайнеров и вносила правки',
+                  ]}
                 />
               </div>
             </div>
@@ -112,24 +122,25 @@ export const About = ({ isActive, isMenuHidden, onChangeMenuState, onNewRoute }:
                 <Subheading content="Что умею" />
               </div>
               <div className={styles.text}>
-                — Прототипирование и дизайн: Figma
+                Прототипирование и дизайн: Figma
                 <br />
                 <br />
-                — Анимация: Motion и Figmotion (плагины Figma), SVGator (SVG-анимация)
+                Анимация: Motion и Figmotion (плагины Figma), SVGator (SVG-анимация)
                 <br />
                 <br />
-                — Графика: Adobe Illustrator, Adobe Photoshop, графический планшет
+                Графика: Adobe Illustrator, Adobe Photoshop, графический планшет
                 <br />
                 <br />
-                — UI-киты в Figma: компоненты, auto layouts, варианты и стили
+                UI-киты в Figma: компоненты, auto layouts, варианты и стили
                 <br />
                 <br />
-                — Фронтенд на базовом уровне: CSS, HTML, JS
+                Фронтенд на базовом уровне: CSS, HTML, JS
                 <br />
                 <br />
-                — Гайдлайны: Human Interface Guidelines и Material Design
+                Гайдлайны: Human Interface Guidelines и Material Design
                 <br />
-                <br />— Прочее: Notion, YouTrack, Tilda
+                <br />
+                Прочее: Notion, YouTrack, Tilda
               </div>
             </div>
             <div style={{ '--delay': 0.3 } as CSSProperties} className={styles.line}>
@@ -145,38 +156,17 @@ export const About = ({ isActive, isMenuHidden, onChangeMenuState, onNewRoute }:
                 <Subheading content="Контакты" />
               </div>
               <div className={styles.text}>
-                <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://www.behance.net/maryaana" rel="noreferrer">
-                    <span>Behance</span> <MediaLinkSVG className={styles.mediaLink} />
-                  </a>
+                <div className={styles.links}>
+                  <ContactLink href="https://www.behance.net/maryaana" icon={<BehanceIcon />} />
+                  <ContactLink href="https://dribbble.com/maryaana" icon={<DribleIcon />} />
+                  <ContactLink
+                    href="https://www.linkedin.com/in/maryaana/"
+                    icon={<LinkedinIcon />}
+                  />
+                  <ContactLink href="https://t.me/maryaana" icon={<TelegramIcon />} />
                 </div>
-                <br />
-                <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://dribbble.com/maryaana" rel="noreferrer">
-                    <span>Dribbble</span> <MediaLinkSVG className={styles.mediaLink} />
-                  </a>
-                </div>
-                <br />
-                <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://www.linkedin.com/in/maryaana/" rel="noreferrer">
-                    <span>Linkedin</span> <MediaLinkSVG className={styles.mediaLink} />
-                  </a>
-                </div>
-                <br />
-                <div className={styles.mediaBox}>
-                  <a target="_blank" href="https://t.me/maryaana" rel="noreferrer">
-                    <span>Telegram</span> <MediaLinkSVG className={styles.mediaLink} />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div style={{ '--delay': 0.5 } as CSSProperties} className={styles.line}>
-              <div className={styles.sticky}>
-                <Subheading content="CV в формате PDF" />
-              </div>
-              <div className={styles.text}>
                 <a href="/cv.pdf">
-                  <button className={styles.pdf}>Скачать (PDF, 1.5 МБ)</button>
+                  <button className={styles.pdf}>Скачать cv (PDF, 1.5 МБ)</button>
                 </a>
               </div>
             </div>

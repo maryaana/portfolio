@@ -5,15 +5,10 @@ import { EROUTES } from './types/enums';
 
 function App() {
   const [activeRoute, setActiveRoute] = useState(EROUTES.PORTFOLIO);
-  const [screenIsTooSmall, setScreenIsTooSmall] = useState(window.innerWidth < 1100);
 
   const [isPortfolioScrolled, setIsPortfolioScrolled] = useState(false);
   const [isAboutScrolled, setIsAboutScrolled] = useState(false);
   const [isMenuHidden, setIsMenuHidden] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('resize', checkSize);
-  }, []);
 
   useEffect(() => {
     const isMenuHiddenByPortfolio = isPortfolioScrolled && activeRoute === EROUTES.PORTFOLIO;
@@ -21,14 +16,6 @@ function App() {
 
     setIsMenuHidden(isMenuHiddenByPortfolio || isMenuHiddenByAbout);
   }, [isPortfolioScrolled, isAboutScrolled, activeRoute]);
-
-  const checkSize = () => {
-    if (window.innerWidth < 1100) {
-      setScreenIsTooSmall(() => true);
-    } else {
-      setScreenIsTooSmall(() => false);
-    }
-  };
 
   const bindChangeScrollState = (binder: string) => (newState: boolean) => {
     if (binder === 'portfolio') {
@@ -41,8 +28,6 @@ function App() {
   const handleNewRoute = (routeName: EROUTES) => {
     setActiveRoute(routeName);
   };
-
-  if (screenIsTooSmall) return <SmallHint />;
 
   return (
     <Layout>

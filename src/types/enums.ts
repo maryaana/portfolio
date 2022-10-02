@@ -4,8 +4,8 @@ export enum EROUTES {
 }
 
 export enum EPROJECTCASES {
-  BEHANCE = 'Кейс на Behance',
-  DRIBBBLE = 'Кейс на Dribbble',
-  SITE = 'Перейти на сайт',
-  FIGMA = 'Перейти к прототипу',
+  BEHANCE = 'Behance',
+  DRIBBBLE = 'Dribbble',
+  SITE = 'Сайт',
+  FIGMA = 'Прототип Figma',
 }

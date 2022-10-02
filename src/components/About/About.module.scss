@@ -75,10 +75,15 @@
   margin-top: 100px;
 }
 
+.links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
 .line {
   display: flex;
   gap: 300px;
-  margin-bottom: 100px;
   transition: 0.5s;
   transition-delay: calc(1s + var(--delay) * 1s);
 
@@ -157,7 +162,7 @@
   border: 2px solid black;
   padding: 12px 24px;
   background: #000000;
-  border-radius: 6px;
+  border-radius: 10px;
   border: 2px solid black;
   font-family: 'Stratos Light';
   font-style: normal;
@@ -182,9 +187,17 @@
     margin-top: 100px;
   }
 
+  .heading {
+    margin-bottom: 50px;
+  }
+  
+  .content {
+    margin-top: 50px;
+  }
+
   .line {
     gap: 150px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
 
   .sticky {
@@ -198,34 +211,81 @@
     line-height: 28px;
 
     &_accent {
-      font-size: 25px;
-      line-height: 34px;
+      font-size: 30px;
+      line-height: 40px;
     }
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   .inner {
-    max-width: 1000px;
+    max-width: 728px;
+    gap: 26px;
   }
 
   .line {
-    gap: 100px;
-  }
-
-  .sticky {
-    width: 250px;
-    padding: 50px 0;
+    gap: 26px;
+    margin-bottom: 0;
   }
 
   .text {
-    width: calc(100% - 250px - 100px);
-    font-size: 20px;
-    line-height: 28px;
+    padding: 40px 0;
+  }
+
+  .sticky {
+    width: 159px;
+    padding: 40px 0;
+  
+    & * {
+      position: sticky;
+      top: 40px;
+      bottom: 40px;
+    }
+  }
+
+  .text {
+    width: calc(100% - 159px - 26px);
+    font-size: 18px;
+    line-height: 24px;
 
     &_accent {
       font-size: 25px;
-      line-height: 34px;
+      line-height: 35px;
     }
+  }
+
+  .exp {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    max-width: 343px;
+  }
+
+  .line {
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+  
+  .sticky {
+    padding: 0;
+    width: 100%;
+  }
+
+  .text {
+    padding: 0;
+    width: 100%;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pdf {
+    width: 100%;
   }
 }
