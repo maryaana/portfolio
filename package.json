@@ -1,7 +1,7 @@
 {
   "name": "maryana-cv",
   "version": "0.1.0",
-  "homepage": "https://pechenyice.github.io/designCV",
+  "homepage": "https://maryaana.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
