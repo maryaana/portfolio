@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/designCV/static/css/main.e61790b2.css",
+    "main.js": "/designCV/static/js/main.add49a4d.js",
+    "static/media/StratosLCWeb-Light.ttf": "/designCV/static/media/StratosLCWeb-Light.ab5c2c0cdd99533901bc.ttf",
+    "static/media/StratosLCWeb-Regular.ttf": "/designCV/static/media/StratosLCWeb-Regular.9db36b4609891e802c8e.ttf",
+    "static/media/clio.jpg": "/designCV/static/media/clio.8e015532c167228639c7.jpg",
+    "static/media/deti.jpg": "/designCV/static/media/deti.7485dc6ed9ba54bf22b6.jpg",
+    "static/media/papakado.jpg": "/designCV/static/media/papakado.8b76c82def528f841239.jpg",
+    "static/media/business.jpg": "/designCV/static/media/business.8341b08df7e41581c2fa.jpg",
+    "static/media/carsRent.jpg": "/designCV/static/media/carsRent.ca0a8908fa529ecc7686.jpg",
+    "static/media/zenter.jpg": "/designCV/static/media/zenter.01ba0a8333131484dbf4.jpg",
+    "static/media/liteManager.jpg": "/designCV/static/media/liteManager.4dec9ec675640f564d65.jpg",
+    "static/media/architecture.jpg": "/designCV/static/media/architecture.00d840fa84112c4d5700.jpg",
+    "index.html": "/designCV/index.html",
+    "main.e61790b2.css.map": "/designCV/static/css/main.e61790b2.css.map",
+    "main.add49a4d.js.map": "/designCV/static/js/main.add49a4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e61790b2.css",
+    "static/js/main.add49a4d.js"
+  ]
+}
